@@ -8,11 +8,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class FeedActivity : AppCompatActivity() {
+    private val urls = ArrayList<String>()
+    var refresh = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
 
-        val adapter = RecyclerViewAdapter()
+        Toast.makeText(this, "Tap on latest to refresh recycler view", Toast.LENGTH_LONG).show()
+
+        getURls(refresh)
+        refresh+=10
+        val adapter = RecyclerViewAdapter(urls)
         val recyclerView = findViewById<RecyclerView>(R.id.rvFeed)
 
         recyclerView.adapter = adapter
@@ -20,10 +27,18 @@ class FeedActivity : AppCompatActivity() {
 
         val latestButton = findViewById<TextView>(R.id.tvLatest)
         latestButton.setOnClickListener{
-            Toast.makeText(this, "Latest", Toast.LENGTH_LONG).show()
+            getURls(refresh)
+            refresh+=10
             adapter.notifyDataSetChanged()
         }
 
+    }
+
+    fun getURls(refreshNum : Int) {
+        urls.clear()
+        for(i in 1..10){
+            urls.add("https://picsum.photos/200/300?random=${i+refreshNum}")
+        }
     }
 
 }

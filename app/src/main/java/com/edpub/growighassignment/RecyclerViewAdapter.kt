@@ -7,7 +7,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class RecyclerViewAdapter(): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+class RecyclerViewAdapter(val urls: List<String>): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
     inner class ViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -18,7 +18,7 @@ class RecyclerViewAdapter(): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.apply {
             val imageView = findViewById<ImageView>(R.id.ivNewsImage)
-            Glide.with(this).load("https://picsum.photos/400/250?random=$position").into(imageView)
+            Glide.with(this).load(urls[position]).into(imageView)
         }
     }
 
