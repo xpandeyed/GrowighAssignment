@@ -15,7 +15,7 @@ class FeedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
 
-        Toast.makeText(this, "Tap on latest to refresh recycler view", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Tap on Latest to refresh recycler view", Toast.LENGTH_LONG).show()
 
         getURls(refresh)
         refresh+=10

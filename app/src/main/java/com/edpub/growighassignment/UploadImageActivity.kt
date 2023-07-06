@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -17,7 +18,7 @@ class UploadImageActivity : AppCompatActivity() {
 
         imageView = findViewById<ImageView>(R.id.ivImage)
 
-        val selectImage = findViewById<Button>(R.id.bSelectImage)
+        val selectImage = findViewById<TextView>(R.id.bSelectImage)
         selectImage.setOnClickListener {
             imageChooser()
         }
