@@ -76,6 +76,7 @@
                 android:insetLeft="0dp"
                 android:insetTop="0dp"
                 android:insetRight="0dp"
+                android:id="@+id/bNext"
                 android:insetBottom="0dp"
                 app:icon="@drawable/round_arrow_forward_24"
                 app:iconPadding="0dp"
