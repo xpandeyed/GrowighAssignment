@@ -47,6 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_margin="20dp"
+            android:hint="Explore"
+            android:id="@+id/tilExplore"
             android:background="@drawable/gradient_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvName">
@@ -54,10 +56,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/etSearch"
                 android:background="@drawable/white_backgournd"
                 android:drawableStart="@drawable/round_search_24"
-                android:drawablePadding="10dp"
-                android:hint="Explore" />
+                android:drawablePadding="10dp" />
 
 
         </com.google.android.material.textfield.TextInputLayout>

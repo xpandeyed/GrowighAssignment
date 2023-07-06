@@ -6,6 +6,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class FeedActivity : AppCompatActivity() {
     private val urls = ArrayList<String>()
@@ -21,6 +23,7 @@ class FeedActivity : AppCompatActivity() {
         refresh+=10
         val adapter = RecyclerViewAdapter(urls)
         val recyclerView = findViewById<RecyclerView>(R.id.rvFeed)
+
 
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
