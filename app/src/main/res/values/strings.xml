@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GrowighAssignment</string>
+    <string name="preference_file_key">is_first</string>
+</resources>
